@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web con Estilos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            text-align: center;
+        }
+#Título {
+    color: chocolate;
+    text-align: center;
+}
+#CuerpoDePágina {background-color: cadetblue;
+}
+#Contenedor {background-color: antiquewhite;
+}
+#Párrafo {
+    color: yellow;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+#Filas {
+    background-color: aqua;
+    border-color: blueviolet;
+}
+#columna1 {
+    border-color: black;
+    border-top-width: medium;
+}
+#Tabla {
+    margin: 0 auto;
+}
+#CRF {
+    width: 1100px;
+    height: 700;
+}
+#footer {
+            background-color: blue;
+            color: white;
+            width: 100%;
+            height: 60px;
+            float:left
+        }
+    </style>
+</head>
+<body id="CuerpoDePágina">
+    <div id="Contenedor">
+        <h1 id="Título">Página Web con Estilos</h1>
+    </div>
+    <div>
+        <p id="Párrafo">
+            Esta página es para aprender a usar estilos con los ID de las etiquetas
+            dentro de cada contenedor, además también cabe recalcar que todo tipo de etiquetas debe ir dentro de contenedores (comando div), además
+            de que se ve más ordenado.
+        </p>
+    </div>
+    <div>
+        <table id="Tabla">
+            <tr id="Filas">
+                <td>
+                    <h1>MOTOCROSS</h1>
+                    <h2>Da clic en la imágen para ir a la página principal del trabajo 😉</h2>
+                    <a href="Trabajo.html"> <img src="CRF.jpg" alt="PaginaDelTrabajo" id="CRF">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="footer">
+        <p>Autor: Yorjany Gamboa Mora</p>
+    </div>
+</body>
+</html>

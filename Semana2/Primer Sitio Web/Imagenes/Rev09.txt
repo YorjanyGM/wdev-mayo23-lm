@@ -1,0 +1,50 @@
+Links WinterOS Rev09 (11/04/2023)
+
+Guia (POR FAVOR LEER):
+https://ouo.io/M4BgJif
+
+W11 22H2 Pro:
+https://ouo.io/LvkHFf
+
+W10 22H2x64 Pro:
+https://ouo.io/VAkPH2Y 	https://www.mediafire.com/file/fjsuo8rgw13wsh3/WinterOS22H2x64W10Rev09.iso/file
+
+W10 22H2x32 Pro:
+https://ouo.io/NnwxIBL 
+
+W10 LTSC21H2x64 2021:
+https://ouo.io/3S3xGN	https://www.mediafire.com/file/ukhipyw3shnzuek/WinterOSLTSC21H2x64W10Rev09.iso/file
+
+W10 LTSC21H2x32 2021:
+https://ouo.io/MtuBe9
+
+W10 LTSCx64 2019:
+https://ouo.io/JNA3Cb	https://www.mediafire.com/file/02k3frmsx2pwd9u/WinterOSLTSCx64W10Rev09.iso/file
+
+W10 LTSCx32 2019:
+https://ouo.io/LoVL8nh
+
+
+-----------------------------------------------------------------------------------------------------
+
+Info a tener en cuenta respecto a utilidad:
+Las versiones LTSC NO SON COMPACTIBLES CON ADOBE 2022
+Las versiones LTSC NO SOPORTAN JUEGOS MODERNOS COMO WARZONE 2.0
+La version LTSC21H2 requiere instalar la barra de juegos desde la tienda de MS si se desea utilizar
+La version LTSC21H2 requiere instalar xbox desde la tienda de MS si se desea utilizar
+La version LTSC 2019 NO FUNCIONA LA BARRA DE JUEGOS
+La version LTSC 2019 NO FUNCIONA AMOUNG US
+La version LTSC 2019 NO FUNCIONA MINECRAFT
+Las versiones 22H2x64 y W11 22H2 soportan Faceit y ESEA (para ambas tener al dia las actualizaciones)
+Las versiones 22H2 y W11 soportan Oculus Rift
+
+-----------------------------------------------------------------------------------------------------
+
+Info a tener en cuenta respecto al hardware del equipo:
+Equipo nivel tostadora usar la version LTSCx64 o LTSCx32
+Equipo gama media usar LTSC21H2x64 o LTSC21H2x32
+Equipo gama media/alta 22H2x64 o 22H2x32
+Equipos gama alta W11
+*x64 son para equipos que tienen 4gb de ram o mas
+*x32 son para equipos que tienen menos de 4gb de ram
+*SI TU EQUIPO NO TIENE SOPORTE DE CONTROLADORES DE MINIMA PARA WINDOWS 8.1 NO INSTALAR ESTE PROYECTO
