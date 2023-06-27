@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tercer Trabajo CLASS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        /* Para las classe se define con . */
+        .general{
+            position:absolute;
+            width: auto;
+        }
+        .header{
+            width: 100%;
+            height: 60px;
+            float:left;
+            background-color: greenyellow;
+        }
+        .main{
+            
+            width: 100%;
+            height: 620px;
+            float:left
+        }
+        .menu{
+            width: 30%;
+            height: 620px;
+            float:left
+        }
+        .dashboard{
+            
+            width: 70%;
+            height: 620px;
+            float:left
+        } 
+        .footer{
+            width: 100%;
+            height: 60px;
+            float:left
+        }
+        .fondogris{
+            background-color: gray;
+        }
+
+        .fondoazul{
+            background-color: blue;
+        }
+
+        .letraroja{
+            color: red;
+        }
+
+        .letrablanca{
+            color: white;
+        }
+        .lista {
+            text-align: center;
+            float: left;
+        }
+        .textogrande{
+            font-size: 25px;
+        }
+        .imagenmediana {
+            width: 800px;
+        }
+        .verdana {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="general">
+        <div class="header">
+            <h1 class="">El Enduro</h1>
+        </div>
+        <div class="main">
+            <div class="menu fondogris letraroja verdana">
+                <ul class="lista textogrande letrablanca">
+                    <li><a href="Historia.html" class="verdana letrablanca">Historia del Enduro</a></li>
+                    <li><a href="Diferencias.html" class="verdana letrablanca">Diferencias entre Enduro y Motocross</a></li>
+                    <li><a href="HardEnduro.html" class="verdana letrablanca">Hard Enduro El Rodeo</a></li>
+                </ul>
+            </div>
+            <div class="dashboard fondoazul letrablanca">
+                <p>El enduro es una modalidad deportiva del motociclismo que se practica en campo abierto y también cubierto. También existe la modalidad de enduro en bicicleta. Se trata de una carrera tipo rally, en la cual se realizan recorridos por rutas establecidas por la organización en tiempos prefijados.</p>
+                <img src="Enduro.jpg" alt="Moto" class="imagenmediana">
+            </div>
+        </div>
+        <div class="footer fondogris letrablanca">
+            <p class="verdana">Autor: Yorjany Gamboa</p>
+        </div>
+    </div>
+</body>
+</html>
