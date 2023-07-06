@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Calculadora</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <style>
+        .tamtexto {
+            font-size: 50px;
+            text-align: center;
+        }
+        .piepag {
+            text-align: center;
+            color: blue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="tamtexto">Calculadora</h1>
+  </header>
+  <main>
+    <div class="container">
+        <form action="">
+            <div class="mb-3">
+                <br><br>
+              <label for="" class="form-label">Ingrese el primer número</label>
+              <input type="Number"
+                class="form-control" name="Numero1" id="Numero1" aria-describedby="helpId" placeholder="Este campo solo admite números">
+                <br>
+               <label for="" class="form-label">Ingrese el segundo número</label>
+               <input type="Number"
+                class="form-control" name="Numero2" id="Numero2" aria-describedby="helpId" placeholder="Este campo solo admite números">
+            </div>
+            <a name="" id="" class="btn btn-success" href="Calculadora.html" role="button" onclick="MostrarSuma()">Suma</a>
+            <a name="" id="" class="btn btn-dark" href="#" role="button" onclick="MostrarResta()">Resta</a>
+            <a name="" id="" class="btn btn-danger" href="#" role="button" onclick="MostrarMulti()">Multiplicación</a>
+            <a name="" id="" class="btn btn-warning" href="#" role="button" onclick="MostrarDiv()">División</a>
+        </form>
+    </div>
+  </main>
+  <footer>
+    <br>
+    <p class="piepag">Creada por: Yorjany Gamboa</p>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <script>
+    function MostrarSuma(){
+      var num1 = Number (document.getElementById("Numero1").value);
+      var num2 = Number (document.getElementById("Numero2").value);
+      var resultado = "El resultado de su suma es:" + " " + (num1 + num2);
+      alert (resultado)
+    }
+    function MostrarResta(){
+      var num1 = Number (document.getElementById("Numero1").value);
+      var num2 = Number (document.getElementById("Numero2").value);
+      var resultado = "El resultado de su resta es:" + " " + (num1 - num2);
+      alert (resultado)
+    }
+    function MostrarMulti(){
+      var num1 = Number (document.getElementById("Numero1").value);
+      var num2 = Number (document.getElementById("Numero2").value);
+      var resultado = "El resultado de su multiplicación es:" + " " + (num1 * num2);
+      alert (resultado)
+    }
+    function MostrarDiv(){
+      var num1 = Number (document.getElementById("Numero1").value);
+      var num2 = Number (document.getElementById("Numero2").value);
+      var resultado = "El resultado de su división es:" + " " + (num1 / num2);
+      alert (resultado)
+    }
+  </script>
+</body>
+
+</html>

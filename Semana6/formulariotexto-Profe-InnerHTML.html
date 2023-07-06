@@ -25,21 +25,33 @@
               <input type="text"
                 class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese su nombre">
               <small id="helpId" class="form-text text-muted">Ingrese el nombre</small>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Apellido</label>
               <input type="text"
-                class="form-control" name="Apellido" id="Apellido" aria-describedby="helpId" placeholder="Ingrese su apellido">
-              <small id="helpId" class="form-text text-muted">Ingrese el apellido</small>
+                class="form-control" name="apellido" id="apellido" aria-describedby="helpId" placeholder="Ingrese su apellido">
+              <small id="helpId" class="form-text text-muted">apellido</small>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Date</label>
               <input type="date"
-                class="form-control" name="Fecha" id="Fecha" aria-describedby="helpId" placeholder="">
-              <small id="helpId" class="form-text text-muted">Seleccione la fecha</small>
-              <input type="Number"
-                class="form-control" name="Numero" id="Numero" aria-describedby="helpId" placeholder="Ingrese un número">
-              <small id="helpId" class="form-text text-muted">Digite el número</small>
+                class="form-control" name="fecha" id="fecha" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Numero</label>
+              <input type="number"
+                class="form-control" name="numero" id="numero" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Help text</small>
             </div>
             <a name="" id="" class="btn btn-success" href="#" role="button" onclick="mostrarmensaje()">Imprimir Mensaje</a>
             <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="abrirpagina()">Button</a>
-            <a name="" id="" class="btn btn-warning" href="#" role="button" onclick="capturarfecha()">Capturar Fecha</a>
-            <a name="" id="" class="btn btn-warning" href="#" role="button" onclick="capturarnumero()">Mostrar Número</a>
-            <input name="" id="" class="btn btn-primary" type="button" value="Button">
+            <a name="" id="" class="btn btn-danger" href="#" role="button" onclick="fecha()">Fecha</a>
+            <a name="" id="" class="btn btn-info" href="#" role="button" onclick="mostrarnumero()">Mostrar numero</a>
+            <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="mostrarmensajehtml()">Escribiendo en el html</a>
+            <div>
+              <span id="soyresultado">---</span>
+            </div>
         </form>
     </div>
   </main>
@@ -58,9 +70,7 @@
   <script>
     function mostrarmensaje(){
         var comolequieraponer = document.getElementById("nombre").value;
-        var apellido = document.getElementById("Apellido").value;
-        
-
+        var apellido = document.getElementById("apellido").value;
         var mensajepersonalizado = "Bienvenido " + comolequieraponer + " " + apellido;
         alert(mensajepersonalizado);
     }
@@ -68,17 +78,21 @@
     function abrirpagina(){
         alert("Abriendo pagina");
     }
-    function capturarfecha(){
-      var fechacaptura =  Date (document.getElementById("Fecha").value);
 
-      var fecha = "La fecha seleccionada es " + fechacaptura;
-      alert(fecha)
+    function fecha(){
+        fecha = document.getElementById("fecha").value;
+        alert(fecha);
     }
-    function capturarnumero(){
-      var mostrarnumero = document.getElementById("Numero").value;
-      
-      var numero = "El número digitado fue " + mostrarnumero;
-      alert (numero)
+
+    function mostrarnumero(){
+        numero = Number(document.getElementById("numero").value);
+        numero = numero + 12;
+        alert(numero);
+    }
+
+    function mostrarmensajehtml(){
+      numero = Number(document.getElementById("numero").value);
+      document.getElementById("soyresultado").innerHTML = numero;
     }
   </script>
 
