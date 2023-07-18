@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Ejercicio 1</title>
+  <title>Ejercicio 2</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -56,7 +56,6 @@
             .tabla{
                 margin: 0 auto;
             }
-            
     </style>
 </head>
 
@@ -66,14 +65,14 @@
   </header>
   <main>
     <div>
-        <h1 class="Título">Ejercicio 1</h1>    
+        <h1 class="Título">Ejercicio 2</h1>    
         <br>
             <div >
                 <table class="tabla">
                     <th>
-                    <p class="Párrafo">Una persona tiene $100.000 y decide invertir $70.000 en bonos hipotecarios a un 5% (mensual)</p>
-                    <p class="Párrafo">y el resto en un depósito a plazo a 10% (mensual).</p>
-                    <p class="Párrafo">¿Cuánto dinero ganará esta persona después de un mes? 6500</p>
+                    <p class="Párrafo">Usted va a hacer compras por 12000 colones en un comercio y el vendedor le ofrece un descuento de 1000 colones</p>
+                    <p class="Párrafo">demuestre como sería más barato el precio final, si primero le aplican el descuento y luego le cobran el 13% de impuesto</p>
+                    <p class="Párrafo">o que primero le carguen el 13% de impuesto, y luego le hagan el descuento.</p>
                     </th>
                 </table>
             </div>
@@ -82,26 +81,19 @@
         <div class="container">
             <form action="">
                 <div class="recuadropeq">
-                    <label for="" class="form-label">¿Cuando desea invertir en bonos hipotecarios? (Usted ganará un 5% mensual)</label>
+                    <label for="" class="form-label">Ingrese el precio neto (Sin IVA)</label>
                     <input type="number"
-                    class="form-control" name="monto1" id="monto1" aria-describedby="helpId" placeholder="Solo se admiten números">
-                </div>
-                <br>
-                <div class="recuadropeq">
-                    <label for="" class="form-label">Invierta aquí el resto de su dinero. (Usted ganará un 10% mensual)</label>
-                    <input type="number" digitGroupSeparator=","
-                    class="form-control" name="monto2" id="monto2" aria-describedby="helpId" placeholder="Solo se admiten números">
+                    class="form-control" name="PrecioNeto" id="PrecioNeto" aria-describedby="helpId" placeholder="Solo se admiten números">
                 </div>
                 <br>
                 <div>
-                <a name="" id="" class="btn btn-success" href="#" role="button" onclick="calcularganancia1ermes()">Clic aquí para saber cuanto dinero ganará usted cada cierta cantidad de tiempo</a>
+                <a name="" id="" class="btn btn-success" href="#" role="button" onclick="IVA()">IVA</a>
+                <a name="" id="" class="btn btn-success" href="#" role="button" onclick="PrimeroDesc()">Primero Descuento y luego IVA</a>
+                <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="PrimeroIVA()">Primero IVA y luego Descuento</a>
                 </div>
-                    <span class="negrita" id="ResultadoGanancia">Su ganancia mensual se mostrará aquí</span>
+                    <span class="negrita" id="PrecioFinal">Precio Final</span>
                     <br>
-                    <span class="negrita" id="ResultadoGanancia2">Su ganancia en dos meses se mostrará aquí</span>
-                    <br>
-                    <span class="negrita" id="ResultadoGanancia3">Su ganancia en tres meses se mostrará aquí</span>
-                </div>
+                    <span class="negrita" id="IVA">Tasa de IVA 13%</span>
             </form>
         </div>
   </main>
@@ -118,13 +110,20 @@
   </script>
 
     <script>
-        function calcularganancia1ermes(){
-            var num1 = Number (document.getElementById("monto1").value);
-            var num2 = Number (document.getElementById("monto2").value);
-            var resultado = (num1 * 5) + (num2 *10);
-            document.getElementById("ResultadoGanancia").innerHTML = "Usted en un mes ganará " + resultado / 100;
-            document.getElementById("ResultadoGanancia2").innerHTML = "Usted en dos meses ganará " + (resultado / 100) * 2;
-            document.getElementById("ResultadoGanancia3").innerHTML = "Usted en tres meses ganará " + (resultado / 100) * 3;
+        function PrimeroDesc(){
+        var num1 = Number (document.getElementById("PrecioNeto").value);
+            var resultado = (num1 - 1000);
+            document.getElementById("PrecioFinal").innerHTML = "Su precio final realizando primero el descuento de mil colones es: " + (((resultado * 13) / 100) + resultado);
+        }
+        function PrimeroIVA(){
+            var num1 = Number (document.getElementById("PrecioNeto").value);
+            var resultado = ((num1 * 13) / 100);
+            document.getElementById("PrecioFinal").innerHTML = "Su precio final agregando primero el IVA es: " + ((resultado + num1) - 1000);
+        }
+        function IVA(){
+            var num1 = Number (document.getElementById("PrecioNeto").value);
+            var resultado = (num1 * 13);
+            document.getElementById("IVA").innerHTML = "Tasa de IVA (13%)" + resultado / 100;
         }
     </script>
 </body>

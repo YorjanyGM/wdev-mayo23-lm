@@ -1,0 +1,25 @@
+<script>
+    //modulos de codigo, librerias
+    //class palabra reservada
+    //constructor y ajustarId son funciones
+    //this. es para renombrar
+    class inventario{
+        constructor(id, nombre, precio, color){
+            this.id= id;
+            this.nombre= nombre;
+            this.precio= precio;
+            this.color= color;
+        } 
+        ajustarId(id){
+            this.id = id;
+        }
+
+        funcionquedevuelveid(){
+            return this.id;
+        }
+
+    }
+
+    const cualquiernombre = inventario(1, "Laptop", 1200, "Gris")
+
+</script>
