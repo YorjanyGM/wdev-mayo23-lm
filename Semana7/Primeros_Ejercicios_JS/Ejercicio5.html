@@ -40,7 +40,7 @@
               font-size: 8px;
           }
           .recuadropeq {
-              width: 300px;
+              width: 400px;
           }
           .tamimagen {
               height: 200px;
@@ -83,25 +83,26 @@
       <div class="container">
           <form action="">
               <div class="recuadropeq">
-                  <label for="" class="form-label">Ingrese su sexo</label>
-                  <input type="text"
-                  class="form-control" name="Sexo" id="Sexo" aria-describedby="helpId" placeholder="Indique aquí su sexo">
+                  <label for="" class="form-label">Ingrese su género</label>
+                  <input type="Text"
+                  class="form-control" name="Sexo" id="Sexo" aria-describedby="helpId" placeholder="Indique si es 'Masculino' o 'Femenino'">
               </div>
               <div class="recuadropeq">
                 <label for="" class="form-label">Ingrese su edad</label>
-                <input type="number"
+                <input type="Number"
                 class="form-control" name="Edad" id="Edad" aria-describedby="helpId" placeholder="Indique aquí su edad">
             </div>
               <br>
               <div>
-              <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="Valor()">¿Se puede usted pensionar?</a>
+              <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="botón()">¿Se puede usted pensionar?</a>
               </div>
                   <span class="negrita" id="Resultado">Aquí se mostrará la respuesta</span>
           </form>
       </div>
   </main>
   <footer>
-    <!-- place footer here -->
+    <br>
+        <p class="piepag">Realizado por: Yorjany Gamboa</p>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -112,24 +113,33 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
   <script>
-    function Valor(){
-      var a= Text (document.getElementById("Sexo").value);
-      var b= Number (document.getElementById("Edad").value);
-      if (b=>65) {
-        document.getElementById("Resultado").innerHTML = "Usted puede pensionarse.";
-                } else {
-        document.getElementById("Resultado").innerHTML = "Usted no puede pensionarse.";
-              }
-            }
-    function Valor(){
-      var a= Text (document.getElementById("Sexo").value);
-      var b= Number (document.getElementById("Edad").value);
-      if (a = "Mujer") {
-        document.getElementById("Resultado").innerHTML = "Usted puede pensionarse.";
-                } else {
-        document.getElementById("Resultado").innerHTML = "Usted no puede pensionarse.";
-              }
-            }
+    function botón(){
+      a = (document.getElementById("Sexo").value);
+      b = (document.getElementById("Edad").value);
+      h = "Masculino";
+      f = "Femenino";
+      sicumplehombre = "✔ Usted como hombre cumple con los requisitos para ser pensionado.";
+      nocumplehombre = "❌ Usted como hombre no cumple con los requisitos para ser pensionado.";
+      sicumplemujer = "✔ Usted como mujer cumple con los requisitos para ser pensionada.";
+      nocumplemujer = "❌ Usted como mujer no cumple con los requisitos para ser pensionada.";
+      nocumplereq= "⚠ Por favor revise los datos ingresados, ingrese su género como se indica en el primer recuadro."
+    
+    if (a == h && b>=65) {
+      document.getElementById("Resultado").innerHTML = sicumplehombre;
+    }
+    else if (a == f && b>=62) {
+      document.getElementById("Resultado").innerHTML = sicumplemujer;
+      }
+    else if (a == h && b<65) {
+      document.getElementById("Resultado").innerHTML = nocumplehombre;
+      }
+    else if (a == f && b<62) {
+      document.getElementById("Resultado").innerHTML = nocumplemujer;
+      }
+    else {
+      document.getElementById("Resultado").innerHTML = nocumplereq;
+      }
+    }
 </script>
 </body>
 </html>
