@@ -38,7 +38,7 @@ formulario.addEventListener('submit', function(e)
             })
         .then(estructura => estructura.json())
         .then((datosrespuesta) => {
-            alert("Salvado")
+            alert("Salvado, por favor recargue la página para ver reflejado el cambio")
                 //ModalSucces.show()
                 completeInsert() 
             })

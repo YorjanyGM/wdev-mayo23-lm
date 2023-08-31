@@ -28,15 +28,15 @@ menuprincipal.innerHTML += `
     <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estudiantes</a>
             <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="listar_estudiantes.html">Lista de estudiantes</a>
-                <a class="dropdown-item" href="crear_estudiantes.html">Crear estudiante nuevo</a>
+                <a class="dropdown-item" href="listarestudiantes.html">Lista de estudiantes</a>
+                <a class="dropdown-item" href="crearestudiantes.html">Crear estudiante nuevo</a>
             </div>
         </li>
     <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Grupos</a>
             <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="listar_grupos.html">Lista de grupos</a>
-                <a class="dropdown-item" href="crear_grupos.html">Crear grupo nuevo</a>
+                <a class="dropdown-item" href="listargrupo.html">Lista de grupos</a>
+                <a class="dropdown-item" href="creargrupo.html">Crear grupo nuevo</a>
             </div>
         </li>
     </ul>
