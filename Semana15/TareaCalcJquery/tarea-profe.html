@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Jquery</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+ <style>
+    .mb-3 {
+        width: 300px;
+    }
+ </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //alert("Bienvenidos");
+            $("#sumar").click(function (e) { 
+            // e.preventDefault();
+            num1 = $("#Numero1").val();
+            num2 = $("#Numero2").val();
+            sumar (num1, num2);
+            }); 
+            $("#restar").click(function (e) { 
+            // e.preventDefault();
+            num1 = $("#Numero1").val();
+            num2 = $("#Numero2").val();
+            restar (num1, num2);
+            }); 
+            $("#multiplicar").click(function (e) { 
+            // e.preventDefault();
+            num1 = $("#Numero1").val();
+            num2 = $("#Numero2").val();
+            multiplicar (num1, num2);
+            }); 
+            $("#dividir").click(function (e) { 
+            // e.preventDefault();
+            num1 = $("#Numero1").val();
+            num2 = $("#Numero2").val();
+            dividir (num1, num2);
+           //$("#Numero2").val($("#Numero1").val()); --- Este comando funciona para modificar el segundo input con lo que se 
+           // escribió en el primer input
+            });
+            $("#restar").click(function (e) { 
+            // e.preventDefault();
+            MostrarResta();
+            });
+            $("#multiplicar").click(function (e) { 
+            // e.preventDefault();
+            MostrarMulti();
+            });
+            $("#dividir").click(function (e) { 
+            // e.preventDefault();
+            MostrarDiv();
+            });
+            $("#ocultar").click(function (e) { 
+            e.preventDefault();
+            $("#Numero2").hide();
+            });
+            $("#mostrar").click(function (e) { 
+            e.preventDefault();
+            $("#Numero2").show();
+            });
+        });
+        function mostramensaje() {
+            alert ("hola");
+        };
+
+         //CALCULADORA
+    function sumar (num1, num2){
+      resultado = Number (num1) + Number (num2);
+      //la siguiente línea es para poner el resultado en un input el #resultado, es el id del input
+      $("#resultadoinput").val(resultado);
+    }
+    function restar (num1, num2){
+      resultado = num1 - num2;
+      //la siguiente línea es para poner el resultado en un input el #resultado, es el id del input
+      $("#resultadoinput").val(resultado);
+    }
+    function multiplicar (num1, num2){
+      resultado = num1 * num2;
+      //la siguiente línea es para poner el resultado en un input el #resultado, es el id del input
+      $("#resultadoinput").val(resultado);
+    }
+    function dividir (num1, num2){
+      resultado = num1 / num2;
+      //la siguiente línea es para poner el resultado en un input el #resultado, es el id del input
+      $("#resultadoinput").val(resultado);
+    };
+    // function MostrarResta(){
+    //   var num1 = $("#Numero1").val();
+    //   var num2 = $("#Numero2").val();
+    //   var resultado = "El resultado de su resta es:" + " " + (num1 - num2);
+    //   document.getElementById("ResultadoGeneral").innerHTML = resultado;
+    // }
+    // function MostrarMulti(){
+    //   var num1 = $("#Numero1").val();
+    //   var num2 = $("#Numero2").val();
+    //   var resultado = "El resultado de su multiplicación es:" + " " + (num1 * num2);
+    //   document.getElementById("ResultadoGeneral").innerHTML = resultado;
+    // }
+    // function MostrarDiv(){
+    //   var num1 = $("#Numero1").val();
+    //   var num2 = $("#Numero2").val();
+    //   var resultado = "El resultado de su división es:" + " " + (num1 / num2);
+    //   document.getElementById("ResultadoGeneral").innerHTML = resultado;
+    // };
+    </script>
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+<div class="container" id="tomela">
+    <div>
+        <h1>Calculadora Jquery</h1>
+    </div>
+    <div>
+        <div class="mb-3">
+          <label for="" class="form-label">Primer Valor</label>
+          <input type="number"
+            class="form-control" name="Numero1" id="Numero1" aria-describedby="helpId" placeholder="Introduzca el primer valor">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Segundo Valor</label>
+          <input type="number"
+            class="form-control" name="Numero2" id="Numero2" aria-describedby="helpId" placeholder="Introduzca el segundo valor">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Resultado</label>
+          <input type="number"
+            class="form-control" name="resultadoinput" id="resultadoinput" aria-describedby="helpId" placeholder="Introduzca el segundo valor">
+        </div>
+    </div>
+    <div>
+        <a name="sumar" id="sumar" class="btn btn-primary" href="#" role="button">Sumar</a>
+        <a name="restar" id="restar" class="btn btn-primary" href="#" role="button">Restar</a>
+        <a name="multiplicar" id="multiplicar" class="btn btn-primary" href="#" role="button">Multiplicar</a>
+        <a name="dividir" id="dividir" class="btn btn-primary" href="#" role="button">Dividir</a>
+
+        <a name="ocultar" id="ocultar" class="btn btn-primary" href="#" role="button">Ocultar</a>
+        <a name="mostrar" id="mostrar" class="btn btn-primary" href="#" role="button">Mostrar</a>
+    </div>
+    <div>
+        <span class="negrita" id="ResultadoGeneral">Su resultado se mostrará aquí</span>
+    </div>
+</div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
