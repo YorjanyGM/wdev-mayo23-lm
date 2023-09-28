@@ -145,6 +145,7 @@ function ajustardatostabla(datos){
         myModalEditar.show();
     }
 
+    jqvalge
 consultardatos();
 
 //crear una funcion parecida a la del submit
