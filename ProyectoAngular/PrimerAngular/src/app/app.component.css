@@ -1,0 +1,9 @@
+.mb-3 {
+    text-align: center;
+}
+#fondoparrafo {
+    background-color: brown;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 20px;
+  }

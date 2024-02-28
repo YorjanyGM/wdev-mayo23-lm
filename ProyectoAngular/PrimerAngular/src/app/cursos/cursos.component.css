@@ -1,0 +1,17 @@
+.container {
+    text-align: center;
+  }
+  .mb-3 {
+    width: 400px;
+    margin: 0 auto;
+    font-weight: bold;
+  }
+  .form-label {
+    text-align: center;
+  }
+  .form-text {
+ text-align: center;
+  }
+  .form-control {
+    text-align: center;
+  }
